@@ -27,6 +27,12 @@ public class exemploApplication {
 			AlunoRepository.inserir(
 					new Aluno(null, "Matheusão", c1, 2020));
 
+			Curso c2 = CursoRepository.inserir(
+			new Curso(null, "Engenharia de Alimentos"));
+
+			AlunoRepository.inserir(
+					new Aluno(null, "Chef Jacquin", c2, 2023));
+
 			List<Aluno> listaAlunos = AlunoRepository.listar();
 			listaAlunos.forEach(System.out::println);
 		};
